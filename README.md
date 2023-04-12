@@ -1,5 +1,6 @@
 # Employee-Management-System
 A command-line content management system (CMS) application to manage a company's employee database, using Node.js, Inquirer, and MySQL.
+
 ## Table of Contents
 - [User Story](#user-story)
 - [Installation](#installation)
