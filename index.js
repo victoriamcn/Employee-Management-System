@@ -59,7 +59,7 @@ function init() {
         .then(async (response) => {
             let choice = response.choice;
             //console.log(response)
-            await init();
+            //await init();
             switch (choice) {
                 
                 case 'viewEmployees':
