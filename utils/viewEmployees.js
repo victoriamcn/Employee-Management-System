@@ -1,4 +1,6 @@
-// db OOP connection
-const connection = require('./connections')
+const connection = require('../db/connections');
 
-connection.query('SHOW TABLES; SELECT first_name last_name role_id FROM employee INNER JOIN roles USING (title)')
+connection.query("SELECT first_name last_name role_id FROM employee INNER JOIN roles USING (title)", function (err, result, fields) { 
+    //your function here what you want to do with that data/result
+    
+});

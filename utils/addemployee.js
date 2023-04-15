@@ -31,4 +31,4 @@ function addEmployee() {
 
 //function updateEmployee(){}
 
-module.exports = addEmployee()
+module.exports = addEmployee
