@@ -1,6 +1,5 @@
 const mysql = require('mysql2');
-//hide secrets
-require('dotenv').config()
+require('dotenv').config() //hide secrets
 
 const connection = mysql.createConnection(
     //instance we created
@@ -15,7 +14,7 @@ const connection = mysql.createConnection(
 
 connection.connect(function(err){
     if (err) throw err;
-    console.log('Connected :)')
+    //console.log('Connected :)')
 })
 
 module.exports = connection;
