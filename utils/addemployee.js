@@ -17,8 +17,8 @@ function addEmployee() {
             {
                 type: 'input',
                 name: 'last_name',
-                message: "What is the new employee's LAST name?",
-            }
+                message: "What is the new employee's LAST name?"
+            },
         ])
         .then((response) => {
             let firstName = response.first_name;
@@ -33,4 +33,4 @@ function addEmployee() {
 
 //function updateEmployee(){}
 
-module.exports = addEmployee
+module.exports = addEmployee()
