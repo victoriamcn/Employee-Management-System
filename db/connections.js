@@ -9,12 +9,11 @@ const connection = mysql.createConnection(
     password: process.env.DB_PASSWORD,
     database: process.env.DB_NAME
   },
-  console.log(`Connected to the classlist_db database.`)
+  console.log(`Connected to the database.`)
 );
 
 connection.connect(function(err){
     if (err) throw err;
-    //console.log('Connected :)')
 })
 
 module.exports = connection;

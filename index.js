@@ -1,11 +1,13 @@
 //inquirer
 const inquirer = require('inquirer')
-const sql = require('./db/connections');
+const connection = require('./db/connections');
 
-//import utils
-const addemployee = require('./utils/addemployee')
-const departmentUtil = require('./utils/departments')
-const roleUtil = require('./utils/roles')
+//import utils folder
+const addEmployee = require('./utils/addemployee')
+const viewEmployees = require('./utils/viewEmployees')
+const updateEmployee = require('./utils/updateEmployee')
+// const departmentUtil = require('./utils/departments')
+// const roleUtil = require('./utils/roles')
 
 //Array of questions for user input
 const menu = [
@@ -54,30 +56,32 @@ const menu = [
 function init() {
     inquirer
         .prompt(menu)
-        .then((response) => {
-            let choice = response.choices;
+        .then(async (response) => {
+            let choice = response.choice;
             //console.log(response)
+            await init();
             switch (choice) {
+                
                 case 'viewEmployees':
                     viewEmployees
                     break;
                 case 'addEmployee':
-                    addemployee;
+                    addEmployee;
                     break;
                 case 'updateEmployee':
-                    updateEmployee
+                    updateEmployee;
                     break;
                 case 'viewRoles':
-                    viewRoles()
+                    viewRoles
                     break;
                 case 'addRole':
-                    addRole()
+                    addRole
                     break;
                 case 'viewDepartments':
-                    viewDepartments()
+                    viewDepartments
                     break;
                 case 'addDepartment':
-                    addDepartment()
+                    addDepartment
                     break;
                 case 'quit':
                     quit()
@@ -90,6 +94,10 @@ function init() {
           });
         
 }
+//QUIT
+// function quit(){
+    
+// }
 
 //init menu
 init();
