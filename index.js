@@ -1,6 +1,5 @@
 //inquirer
 const inquirer = require('inquirer')
-//database
 const sql = require('./db/connections');
 
 //import utils

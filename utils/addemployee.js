@@ -1,4 +1,7 @@
-//const roleUtil = require('./utils/roles')
+//inquirer
+const inquirer = require('inquirer')
+// const sql = require('./db/connections');
+// const roleUtil = require('./utils/roles')
 
 //EMPLOYEE FUNCTIONS SECTION
 //function viewEmployee(){}
