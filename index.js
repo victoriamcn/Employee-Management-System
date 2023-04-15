@@ -3,6 +3,11 @@ const inquirer = require('inquirer')
 //database
 const sql = require('./db/connections');
 
+//import utils
+const addemployee = require('./utils/addemployee')
+const departmentUtil = require('./utils/departments')
+const roleUtil = require('./utils/roles')
+
 //Array of questions for user input
 const menu = [
     {
@@ -19,8 +24,8 @@ const menu = [
                 value: 'addEmployee'
             },
             {
-                name: 'Update employee role',
-                value: 'updateRole'
+                name: 'Update employee',
+                value: 'updateEmployee'
             },
             {
                 name: 'View all roles',
@@ -46,40 +51,46 @@ const menu = [
     }
 ]
 
-function addEmployee() {
-    inquirer
-        .prompt([
-            {
-                type: 'input',
-                name: 'first_name',
-                message: "What is the new employee's FIRST name?"
-            },
-            {
-                type: 'input',
-                name: 'last_name',
-                message: "What is the new employee's LAST name?",
-            }
-        ])
-        .then((response) => {
-            console.log(response.first_name, response.last_name)
-        })
-}
-
 //function to initialize prompt
 function init() {
     inquirer
         .prompt(menu)
         .then((response) => {
             let choice = response.choices;
-            console.log(response)
+            //console.log(response)
             switch (choice) {
-                case 'addEmployee':
-                    addEmployee();
+                case 'viewEmployees':
+                    viewEmployees
                     break;
-
+                case 'addEmployee':
+                    addemployee;
+                    break;
+                case 'updateEmployee':
+                    updateEmployee
+                    break;
+                case 'viewRoles':
+                    viewRoles()
+                    break;
+                case 'addRole':
+                    addRole()
+                    break;
+                case 'viewDepartments':
+                    viewDepartments()
+                    break;
+                case 'addDepartment':
+                    addDepartment()
+                    break;
+                case 'quit':
+                    quit()
+                    break;
             }
         })
+        .catch((error) => {
+            console.log('There was an error');
+            console.info(error);
+          });
+        
 }
+
 //init menu
 init();
-
