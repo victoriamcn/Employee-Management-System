@@ -11,10 +11,15 @@ const connection = require('../db/connections');
 // });
 
 function viewEmployees(){
-    const [rows] =  connection.query('SELECT * FROM employee')
-    return rows
-}
-const employees =  viewEmployees()
-console.log(employees)
+    const db = connection.query(
+        "SELECT employee.id, employee.first_name, employee.last_name, role.title, department.name AS department, role.salary, CONCAT(manager.first_name, ' ', manager.last_name) AS manager FROM employee LEFT JOIN role on employee.role_id = role.id LEFT JOIN department on role.department_id = department.id LEFT JOIN employee manager on manager.id = employee.manager_id;"
+      );
+      db.then(([rows]) => {
+        let employees = rows;
+        console.log(rows);
+      });
+    }
+    const employees = viewEmployees();
+    console.log(employees);
 
 module.exports = viewEmployees
