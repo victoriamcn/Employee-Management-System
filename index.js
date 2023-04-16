@@ -3,11 +3,14 @@ const inquirer = require('inquirer')
 const connection = require('./db/connections');
 
 //import utils folder
+//employee
 const addEmployee = require('./utils/addemployee')
 const viewEmployees = require('./utils/viewEmployees')
 const updateEmployee = require('./utils/updateEmployee')
-// const departmentUtil = require('./utils/departments')
-// const roleUtil = require('./utils/roles')
+//roles
+const viewRoles = require('./utils/viewRoles')
+//department
+const viewDepartments = require('./utils/viewDepartments')
 
 //Array of questions for user input
 const menu = [
@@ -63,7 +66,7 @@ function init() {
             switch (choice) {
                 
                 case 'viewEmployees':
-                    viewEmployees
+                    viewEmployees;
                     break;
                 case 'addEmployee':
                     addEmployee;
@@ -72,7 +75,7 @@ function init() {
                     updateEmployee;
                     break;
                 case 'viewRoles':
-                    viewRoles
+                    viewRoles;
                     break;
                 case 'addRole':
                     addRole
