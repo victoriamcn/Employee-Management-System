@@ -1,6 +1,6 @@
 const inquirer = require('inquirer')
 const connection = require('../db/connections');
-const viewDepartments = require('./utils/viewDepartments');
+const viewDepartments = require('./viewDepartments');
 
 function addDepartment() {
     inquirer

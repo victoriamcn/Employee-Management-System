@@ -1,8 +1,10 @@
 const inquirer = require('inquirer')
 const connection = require('../db/connections');
-const viewRoles = require('./utils/viewRoles');
+const viewDepartments = require('./viewDepartments')
+const viewRoles = require('./viewRoles');
 
 function addRole() {
+    connection.
     inquirer
         .prompt([
             {
@@ -52,6 +54,7 @@ function addRole() {
                         name: 'Public Works',
                         value: 'Public Works'
                     },
+                ]
             }
         ])
         .then(async (response) => {
