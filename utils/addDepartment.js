@@ -1,5 +1,6 @@
 const inquirer = require('inquirer')
 const connection = require('../db/connections');
+const viewDepartments = require('./utils/viewDepartments');
 
 function addDepartment() {
     inquirer
@@ -15,13 +16,12 @@ function addDepartment() {
             const db = connection.query(
                 `INSERT INTO department (department.name) VALUES  (${response.name})`
             );
-            db.then(([rows]) => {
-                let departments = rows;
-                console.log(rows);
-            });
+
         })
-    const departments = addDepartment();
-    console.log(departments);
+        .then(async ()=> {
+            console.log('Please see the updated department table below.')
+            viewDepartments()
+        })
 }
 
 module.exports = addDepartment
