@@ -12,11 +12,7 @@ function addDepartment() {
             }
         ])
         .then(async (response) => {
-
-            const db = connection.query(
-                `INSERT INTO department (department.name) VALUES  (${response.name})`
-            );
-
+            connection.query(`INSERT INTO department (department.name) VALUES  (${response.name})`);
         })
         .then(async () => {
             console.log('Please see the updated department table below.')
