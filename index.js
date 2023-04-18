@@ -66,7 +66,7 @@ function init() {
             //console.log(response)
             //await init();
             switch (choice) {
-                
+
                 case 'viewEmployees':
                     viewEmployees;
                     break;
@@ -89,19 +89,19 @@ function init() {
                     addDepartment
                     break;
                 case 'quit':
-                    quit()
+                    (await connection).end()
                     break;
             }
         })
         .catch((error) => {
             console.log('There was an error');
             console.info(error);
-          });
-        
+        });
+
 }
 //QUIT
 // function quit(){
-    
+
 // }
 
 //init menu

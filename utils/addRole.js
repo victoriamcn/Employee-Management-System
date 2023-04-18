@@ -1,10 +1,10 @@
 const inquirer = require('inquirer')
 const connection = require('../db/connections');
 const viewDepartments = require('./viewDepartments')
+const departmentList = require('./departmentArray')
 const viewRoles = require('./viewRoles');
 
 function addRole() {
-    connection.
     inquirer
         .prompt([
             {
@@ -21,46 +21,12 @@ function addRole() {
                 type: 'list',
                 name: 'department',
                 message: 'What is the department for the role?',
-                choices: [
-                    {
-                        name: 'Clerk',
-                        value: 'Clerk'
-                    },
-                    {
-                        name: 'Health',
-                        value: 'Health'
-                    },
-                    {
-                        name: 'Planning and Zoning',
-                        value: 'Planning and Zoning'
-                    },
-                    {
-                        name: 'Parks',
-                        value: 'Parks'
-                    },
-                    {
-                        name: 'Animal Control',
-                        value: 'Animal Control'
-                    },
-                    {
-                        name: 'City Council',
-                        value: 'City Council'
-                    },
-                    {
-                        name: 'Mayoral Office',
-                        value: 'Mayoral Office'
-                    },
-                    {
-                        name: 'Public Works',
-                        value: 'Public Works'
-                    },
-                ]
+                choices: departmentList,
             }
         ])
         .then(async (response) => {
-
-            const db = connection.query(
-                `INSERT INTO role (role.title, role.salary, role.department_id) VALUES  (${response.title}, ${response.salary})`
+            connection.query(
+                `INSERT INTO role (role.title, role.salary, role.department_id) VALUES  (${response.title}, ${response.salary}, ${response.department_id})`
             );
 
         })
@@ -72,6 +38,7 @@ function addRole() {
             console.log('There was an error');
             console.info(error);
         });
+}
 }
 
 module.exports = addRole
