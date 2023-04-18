@@ -9,8 +9,10 @@ const viewEmployees = require('./utils/viewEmployees')
 const updateEmployee = require('./utils/updateEmployee')
 //roles
 const viewRoles = require('./utils/viewRoles')
+const addRole = require('./utils/addRole')
 //department
 const viewDepartments = require('./utils/viewDepartments')
+const addDepartment = require('./utils/addDepartment')
 
 //Array of questions for user input
 const menu = [
