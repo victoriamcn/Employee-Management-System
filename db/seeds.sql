@@ -3,45 +3,45 @@ use employees;
 INSERT INTO department
     (name)
 VALUES
-    ('Clerk Department'), --1
-    ('Health Department'), --2
-    ('Planning & Zoning'), --3
-    ('Parks & Recreation'),  --4
-    ('Animal Control'),  --5
-    ('City Council'), --6
-    ('Mayor'), --7
-    ('Public Works Department'), --8
+    ('Clerk'),
+    ('Health'),
+    ('Planning and Zoning'),
+    ('Parks'),
+    ('Animal Control'),
+    ('City Council'),
+    ('Mayoral Office'),
+    ('Public Works');
 
 INSERT INTO role
     (title,salary,department_id)
 VALUES
-    ('Municipal Stenographer', 45000, 1), --1
-    ('Public Relations Director', 70000, 2), --2
-    ('City Manager', 98000, 3), --3
-    ('Assistant City Manager', 90000, 3), --4
-    ('Director of Parks and Recreation', 85000, 4), --5
-    ('Deputy Director', 80000, 4), --6
-    ('Office Manager', 70000, 1), --7
-    ('Recreation Coordinator', 50000, 4),  --8
-    ('Recreation Assistant', 35000, 4),  --9
-    ('Animal Control Deputy', 55000, 5),  --10
-    ('Councilperson', 80000, 6),  --11
-    ('Mayor', 100000, 7),   --12
-    ('Park Ranger', 48000, 4), --13
-    ('Maintenance Technician', 50000, 8),  --14
-    ('Director of Public Works', 85000, 4);  --15
+    ('Stenographer', 45000, 1),
+    ('PR Director', 70000, 2),
+    ('City Manager', 98000, 3),
+    ('Asst City Manager', 90000, 3),
+    ('Parks Director', 85000, 4),
+    ('Deputy Director', 80000, 4),
+    ('Office Manager', 70000, 1),
+    ('Event Coordinator', 50000, 4),
+    ('Event Assistant', 35000, 4),
+    ('Animal Control', 55000, 5),
+    ('Councilperson', 80000, 6),
+    ('Mayor', 100000, 7),
+    ('Park Ranger', 48000, 4),
+    ('Maintenance Tech', 50000, 8),
+    ('Director', 85000, 4);
 
 INSERT INTO employee
     (first_name,last_name,role_id,manager_id)
 VALUES
-    ('Ethel', 'Beavers', 1, 7), --1
-    ('Ann', 'Perkins', 2, 7),  --2
-    ('Chris', 'Trager', 2, 7),  --3
-    ('Ben', 'Wyatt', 3, 3),         --4
-    ('Ron', 'Swanson', 4, 7),  --5
-    ('Leslie', 'Knope', 6, 5), --6
-    ('Bill', 'Gunderson', 12, NULL), --7
-    ('Donna', 'Meagle', 7, 5)
+    ('Ethel', 'Beavers', 1, 7),
+    ('Ann', 'Perkins', 2, 7),
+    ('Chris', 'Trager', 2, 7),
+    ('Ben', 'Wyatt', 3, 3),
+    ('Ron', 'Swanson', 4, 7),
+    ('Leslie', 'Knope', 6, 5),
+    ('Bill', 'Gunderson', 12, 1),
+    ('Donna', 'Meagle', 7, 5),
     ('Tom', 'Haverford', 9, 6),
     ('April', 'Ludgate', 8, 5),
     ('Andy', 'Dwyer', 9, 5),
@@ -54,4 +54,4 @@ VALUES
     ('Bill', 'Dexhart', 11, 7),
     ('Carl', 'Lorthner', 13, 5),
     ('George', 'Williams', 14, 21),
-    ('Kyle', 'Kyles', 15, 7); --21
+    ('Kyle', 'Kyles', 15, 7);

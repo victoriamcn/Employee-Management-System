@@ -2,7 +2,7 @@ const connection = require('../db/connections');
 
 function viewDepartments(){
     const db = connection.query(
-        "SELECT department.name"
+        "SELECT * department"
       );
       db.then(([rows]) => {
         let departments = rows;
