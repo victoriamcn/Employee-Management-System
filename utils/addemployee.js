@@ -26,8 +26,11 @@ function addEmployee() {
                 console.log(results);
             })
         })
-
-    }
+        .catch((error) => {
+            console.log('There was an error');
+            console.info(error);
+        });
+}
 
 //function updateEmployee(){}
 

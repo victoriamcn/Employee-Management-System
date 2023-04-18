@@ -4,7 +4,7 @@ const connection = require('./db/connections');
 
 //import utils folder
 //employee
-const addEmployee = require('./utils/addemployee')
+const addEmployee = require('./utils/addEmployee')
 const viewEmployees = require('./utils/viewEmployees')
 const updateEmployee = require('./utils/updateEmployee')
 //roles
