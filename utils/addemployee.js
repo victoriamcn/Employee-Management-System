@@ -1,7 +1,8 @@
 //inquirer
-const inquirer = require('inquirer')
-// const sql = require('./db/connections');
-// const roleUtil = require('./utils/roles')
+const inquirer = require('inquirer');
+const connection = require('./db/connections');
+const viewEmployees = require('./viewEmployees');
+
 
 function addEmployee() {
     inquirer
@@ -16,15 +17,28 @@ function addEmployee() {
                 name: 'last_name',
                 message: "What is the new employee's LAST name?"
             },
+            {
+                type: 'list',
+                name: 'role_id',
+                message: "What is the new employee's role?",
+                choices: viewRoles.map(role => ({name:role.title, value: role.id}))
+            },
+            {
+                type: 'list',
+                name: 'manager_id',
+                message: "Who is the new employee's manager?",
+                choices: '',
+            },
         ])
-        .then((response) => {
-            let firstName = response.first_name;
-            let lastName = response.last_name;
-            console.log(firstName)
-            console.log(lastName)
-            db.query('INSERT INTO employee(first_name, last_name)', function (err, results) {
-                console.log(results);
-            })
+        .then(async (response) => {
+            connection.query(
+                `INSERT INTO employee (employee.first_name, employee.last_name, employee.role_id, employee.manager_id) VALUES (${response.first_name}, ${response.last_name}, ${response.role_id}, ${response.manager_id})`
+            );
+
+        })
+        .then(async () => {
+            console.log('Please see the updated employee table below.')
+            viewEmployees()
         })
         .catch((error) => {
             console.log('There was an error');

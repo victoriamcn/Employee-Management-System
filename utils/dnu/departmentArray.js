@@ -1,5 +1,5 @@
-const connection = require('../db/connections');
-const viewDepartments = require('./viewDepartments');
+const connection = require('../../db/connections');
+const viewDepartments = require('../viewDepartments');
 
 function departmentList() {
 
