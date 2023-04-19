@@ -21,7 +21,7 @@ function addEmployee() {
                 type: 'list',
                 name: 'role_id',
                 message: "What is the new employee's role?",
-                choices: viewRoles.map(role => ({name:role.title, value: role.id}))
+                choices: viewRoles.map(role => ({ name: role.title, value: role.id }))
             },
             {
                 type: 'list',
