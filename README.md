@@ -77,12 +77,14 @@ To view my other projects, you may visit my Git Hub profile: [victoriamcn](https
 ### npm
 - console.table: [LINK](https://www.npmjs.com/package/console.table)
 - mysql2: [LINK](https://www.npmjs.com/package/mysql2#first-query)
-- Name: []() 
 
 ### Example Code
 - GitHub: [anirud314](https://github.com/anirud314/employeeTable)
 - GitHub: [EdenKhaos](https://github.com/EdenKhaos/12-mysql-employee-tracker/blob/master/server.js) 
-- YouTube: [MySQL Node.js Express](https://www.youtube.com/watch?v=Hej48pi_lOc)
+- YouTube: [MySQL Node.js Express by Sam Meech-Ward](https://www.youtube.com/watch?v=Hej48pi_lOc)
+- YouTube: [MySQL Tutorial for Beginners [Full Course] by Programming with Mosh](https://www.youtube.com/watch?v=7S_tz1z_5bA&list=PLCy9cCBpeyhK8vAF8RpcA3_MUX007O7qc&index=8&t=1525s)
+- YouTube: [What is SQL? [in 4 minutes for beginners]: Danielle The](https://www.youtube.com/watch?v=27axs9dO7AE&list=PLCy9cCBpeyhK8vAF8RpcA3_MUX007O7qc&index=9) 
+- YouTube: [SQL SELECT Tutorial - Part 2 |¦| SQL Tutorial |¦| SQL for Beginners: Socratica](https://www.youtube.com/watch?v=PkJKzR_sClM&list=PLi01XoE8jYojRqM4qGBF1U90Ee1Ecb5tt&index=6) 
 
 ### Tutorials
 - inquirer documentation: [Usage](https://python-inquirer.readthedocs.io/en/latest/usage.html#question-types) 
