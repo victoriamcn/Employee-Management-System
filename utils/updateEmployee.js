@@ -8,7 +8,7 @@ const inquirer = require('inquirer');
 const connection = require('./db/connections');
 const viewEmployees = require('./viewEmployees');
 
-
+//in progress
 function addEmployee() {
     inquirer
         .prompt([
