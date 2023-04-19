@@ -2,14 +2,8 @@ const inquirer = require('inquirer');
 const connection = require('./db/connections');
 const viewEmployees = require('./viewEmployees');
 
-
-//inquirer
-const inquirer = require('inquirer');
-const connection = require('../db/connections');
-const viewEmployees = require('./viewEmployees');
-
 //in progress
-function addEmployee() {
+function updateEmployee() {
     inquirer
         .prompt([
             {
@@ -46,6 +40,4 @@ function addEmployee() {
         });
 }
 
-//function updateEmployee(){}
-
-module.exports = addEmployee
+module.exports = updateEmployee
