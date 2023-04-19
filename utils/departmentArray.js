@@ -11,6 +11,9 @@ function departmentList() {
         const list = response.map(data => ({
             value: data.id, name: data.name
         }));
+
+        response.status(200).json(list);
+
     });
 }
 module.exports = departmentList

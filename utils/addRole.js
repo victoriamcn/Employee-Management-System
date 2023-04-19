@@ -1,7 +1,7 @@
 const inquirer = require('inquirer')
 const connection = require('../db/connections');
 const viewDepartments = require('./viewDepartments')
-const departmentList = require('./departmentArray')
+//const departmentList = require('./departmentArray')
 const viewRoles = require('./viewRoles');
 
 function addRole() {
@@ -19,7 +19,7 @@ function addRole() {
             },
             {
                 type: 'list',
-                name: 'department',
+                name: 'department_id',
                 message: 'What is the department for the role?',
                 choices: departmentList,
             }
