@@ -76,6 +76,7 @@ To view my other projects, you may visit my Git Hub profile: [victoriamcn](https
 
 ### npm
 - console.table: [LINK](https://www.npmjs.com/package/console.table)
+- inquirer: [LINK](https://www.npmjs.com/package/inquirer/v/8.2.4)
 - mysql2: [LINK](https://www.npmjs.com/package/mysql2#first-query)
 
 ### Example Code
