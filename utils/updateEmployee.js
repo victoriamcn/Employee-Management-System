@@ -1,5 +1,5 @@
 const inquirer = require('inquirer');
-const connection = require('./db/connections');
+const connection = require('../db/connections');
 const viewEmployees = require('./viewEmployees');
 
 //in progress
