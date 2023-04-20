@@ -16,79 +16,79 @@ const viewDepartments = require('./utils/viewDepartments')
 const addDepartment = require('./utils/addDepartment')
 
 //Array of questions for user input
-const menu = [
-    {
-        type: 'list',
-        name: 'choice',
-        message: 'What would you like to do?',
-        choices: [
-            {
-                name: 'View all employees',
-                value: 'viewEmployees'
-            },
-            {
-                name: 'Add employee',
-                value: 'addEmployee'
-            },
-            {
-                name: 'Update employee',
-                value: 'updateEmployee'
-            },
-            {
-                name: 'View all roles',
-                value: 'viewRoles'
-            },
-            {
-                name: 'Add role',
-                value: 'addRole'
-            },
-            {
-                name: 'View all departments',
-                value: 'viewDepartments'
-            },
-            {
-                name: 'Add departments',
-                value: 'addDepartment'
-            },
-            {
-                name: 'Quit',
-                value: 'quit'
-            }
-        ]
-    }
-]
+// const menu = 
 
 //function to initialize prompt
 function init() {
     inquirer
-        .prompt(menu)
-        .then(async (response) => {
+        .prompt([
+            {
+                type: 'list',
+                name: 'choice',
+                message: 'What would you like to do?',
+                choices: [
+                    {
+                        name: 'View all employees',
+                        value: 'viewEmployees'
+                    },
+                    {
+                        name: 'Add employee',
+                        value: 'addEmployee'
+                    },
+                    {
+                        name: 'Update employee',
+                        value: 'updateEmployee'
+                    },
+                    {
+                        name: 'View all roles',
+                        value: 'viewRoles'
+                    },
+                    {
+                        name: 'Add role',
+                        value: 'addRole'
+                    },
+                    {
+                        name: 'View all departments',
+                        value: 'viewDepartments'
+                    },
+                    {
+                        name: 'Add departments',
+                        value: 'addDepartment'
+                    },
+                    {
+                        name: 'Quit',
+                        value: 'quit'
+                    }
+                ]
+            }
+        ])
+        .then((response) => {
+            let choices = response.choice
             //console.log(response)
-            switch (response) {
+            switch (choices) {
 
                 case 'viewEmployees':
-                    viewEmployees;
+                    viewEmployees();
                     break;
                 case 'addEmployee':
-                    addEmployee;
+                    addEmployee();
                     break;
                 case 'updateEmployee':
-                    updateEmployee;
+                    updateEmployee();
                     break;
                 case 'viewRoles':
-                    viewRoles;
+                    viewRoles();
                     break;
                 case 'addRole':
-                    addRole
+                    addRole()
                     break;
                 case 'viewDepartments':
-                    viewDepartments
+                    viewDepartments()
                     break;
                 case 'addDepartment':
-                    addDepartment
+                    addDepartment()
                     break;
-                case 'quit':
-                    (await connection).end()
+                default: end()
                     break;
             }
         })

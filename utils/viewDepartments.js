@@ -9,7 +9,7 @@ function viewDepartments() {
     }
     console.table(results);
   })
-  init()
+  // init()
 }
 
 module.exports = viewDepartments
