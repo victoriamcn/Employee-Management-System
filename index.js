@@ -63,10 +63,8 @@ function init() {
     inquirer
         .prompt(menu)
         .then(async (response) => {
-            let choice = response.choices;
             //console.log(response)
-            //await init();
-            switch (choice) {
+            switch (response) {
 
                 case 'viewEmployees':
                     viewEmployees;
@@ -95,7 +93,7 @@ function init() {
             }
         })
         .catch((error) => {
-            console.log('There was an error');
+            console.log('There was an error:');
             console.info(error);
         });
 
