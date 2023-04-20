@@ -1,4 +1,5 @@
 const connection = require('../db/connections');
+require('console.table');
 
 function viewRoles() {
   connection.query(
@@ -6,7 +7,7 @@ function viewRoles() {
       if (error) {
         console.info(error)
       }
-      console.log(results);
+      console.table(results);
     });
 }
 

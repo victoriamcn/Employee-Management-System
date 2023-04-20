@@ -1,6 +1,7 @@
 //inquirer
 const inquirer = require('inquirer')
 const connection = require('./db/connections');
+require('console.table');
 
 //import utils folder
 //employee
@@ -62,7 +63,7 @@ function init() {
     inquirer
         .prompt(menu)
         .then(async (response) => {
-            let choice = response.choice;
+            let choice = response.choices;
             //console.log(response)
             //await init();
             switch (choice) {
