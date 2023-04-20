@@ -26,7 +26,7 @@ function updateEmployee() {
         ])
         .then(async (response) => {
             connection.query(
-                //`INSERT INTO employee (employee.first_name, employee.last_name, employee.role_id, employee.manager_id) VALUES (${response.first_name}, ${response.last_name}, ${response.role_id}, ${response.manager_id})`
+                //`UPDATE employee (employee.first_name, employee.last_name, employee.role_id, employee.manager_id) VALUES (${response.first_name}, ${response.last_name}, ${response.role_id}, ${response.manager_id})`
             );
 
         })

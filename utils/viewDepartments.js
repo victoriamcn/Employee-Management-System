@@ -1,15 +1,12 @@
 const connection = require('../db/connections');
 
-function viewDepartments(){
-    const db = connection.query(
-        "SELECT * department"
-      );
-      db.then(([rows]) => {
-        let departments = rows;
-        console.log(rows);
-      });
+function viewDepartments() {
+  connection.query("SELECT * department FROM employees", function (error, results) {
+    if (error) {
+      console.info(error)
     }
-    const departments = viewDepartments();
-    console.log(departments);
+    console.log(results);
+  })
+}
 
 module.exports = viewDepartments
