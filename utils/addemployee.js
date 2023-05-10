@@ -19,21 +19,19 @@ function addEmployee() {
                 message: "What is the new employee's LAST name?"
             },
             {
-                type: 'list',
+                type: 'input',
                 name: 'role_id',
-                message: "What is the new employee's role?",
-                choices: viewRoles.map(role => ({ name: role.title, value: role.id }))
+                message: "What is role id for the new employee?",
             },
             {
-                type: 'list',
+                type: 'input',
                 name: 'manager_id',
                 message: "Who is the new employee's manager?",
-                choices: '',
             },
         ])
         .then(async (response) => {
             connection.query(
-                `INSERT INTO employee (employee.first_name, employee.last_name, employee.role_id, employee.manager_id) VALUES (${response.first_name}, ${response.last_name}, ${response.role_id}, ${response.manager_id})`
+                `INSERT INTO employee (first_name, last_name, role_id, manager_id) VALUES ('${response.first_name}', '${response.last_name}', ${response.role_id}, ${response.manager_id})`
             );
         })
         .then(async () => {
