@@ -1,6 +1,7 @@
 //inquirer
 const inquirer = require('inquirer');
 const connection = require('../db/connections');
+const init = require('../index');
 const viewEmployees = require('./viewEmployees');
 
 
@@ -34,11 +35,11 @@ function addEmployee() {
             connection.query(
                 `INSERT INTO employee (employee.first_name, employee.last_name, employee.role_id, employee.manager_id) VALUES (${response.first_name}, ${response.last_name}, ${response.role_id}, ${response.manager_id})`
             );
-
         })
         .then(async () => {
             console.log('Please see the updated employee table below.')
             viewEmployees()
+            init
         })
         .catch((error) => {
             console.log('There was an error');

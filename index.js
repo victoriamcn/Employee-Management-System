@@ -98,10 +98,7 @@ function init() {
         });
 
 }
-//QUIT
-// function quit(){
 
-// }
-
-//init menu
 init();
+
+module.exports = init

@@ -1,5 +1,6 @@
 const inquirer = require('inquirer')
 const connection = require('../db/connections');
+const init = require('../index');
 const viewDepartments = require('./viewDepartments');
 
 function addDepartment() {
@@ -8,15 +9,16 @@ function addDepartment() {
             {
                 type: 'input',
                 name: 'name',
-                message: 'What is the name of the department?',
+                message: 'What is the name of the new department?',
             }
         ])
         .then(async (response) => {
-            connection.query(`SELECT * FROM department (department.name) VALUES  (${response.name})`);
+            connection.query(`INSERT INTO department (name) VALUES ('${response.name}')`);
         })
         .then(async () => {
             console.log('Please see the updated department table below.')
             viewDepartments()
+            init;
         })
         .catch((error) => {
             console.log('There was an error');

@@ -1,4 +1,5 @@
 const connection = require('../db/connections');
+const init = require('../index');
 require('console.table');
 
 
@@ -9,7 +10,8 @@ function viewEmployees() {
       console.info(error)
     }
     console.table(results);
-  });
+  })
+  init();
 }
 
 module.exports = viewEmployees

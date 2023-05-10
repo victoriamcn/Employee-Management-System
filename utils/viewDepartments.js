@@ -1,15 +1,17 @@
 const connection = require('../db/connections');
+const init = require('../index');
 require('console.table');
 
 
 function viewDepartments() {
-  connection.query("SELECT * FROM department", function (error, results) {
+  connection.query("SELECT * FROM department",
+  function (error, results) {
     if (error) {
       console.info(error)
     }
-    console.table(results);
+    console.table(results)
+    init;
   })
-  // init()
 }
 
 module.exports = viewDepartments
