@@ -45,7 +45,7 @@ VALUES
     ('Harris', 'Doe', 10, 3),
     ('Brett', 'Smith', 10, 3),
     ('Chris', 'Trager', 2, 1),
-    ('Ben', 'Wyatt', 3, 9),
+    ('Ben', 'Wyatt', 3, 11),
     ('Ethel', 'Beavers', 1, 1), 
     ('Ann', 'Perkins', 2, 1), 
     ('Douglass', 'Howser', 11, 1),
