@@ -1,6 +1,7 @@
-const inquirer = require('inquirer')
+const inquirer = require('inquirer');
+const init = require('..');
 const connection = require('../db/connections');
-//const viewDepartments = require('./viewDepartments')
+const viewDepartments = require('./viewDepartments')
 //const departmentList = require('./departmentArray')
 const viewRoles = require('./viewRoles');
 
@@ -18,21 +19,21 @@ function addRole() {
                 message: 'What is the salary of the role?',
             },
             {
-                type: 'list',
+                type: 'input',
                 name: 'department_id',
-                message: 'Select which role the department belongs to:',
-                choices: department.map(department => ({name: department.name, value: department.id}))
+                message: 'What is the department id number?',
             }
         ])
         .then(async (response) => {
             connection.query(
-                `INSERT INTO role (role.title, role.salary, role.department_id) VALUES  (${response.title}, ${response.salary}, ${response.department_id})`
+                `INSERT INTO role (title, salary, department_id) VALUES  ('${response.title}', ${response.salary}, ${response.department_id})`
             );
 
         })
         .then(async () => {
             console.log('Please see the updated role table below.')
             viewRoles()
+            init;
         })
         .catch((error) => {
             console.log('There was an error');
