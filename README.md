@@ -22,31 +22,20 @@ SO THAT I can organize and plan my business
 
 ## Installation
 
-In order to install ***inquirer***, please use:
-```
-npm i inquirer@8.2.4
-```
+In order to install **inquirer**, please write the following in the Command Line: ```npm i inquirer@8.2.```
 
-## Tests
-
-- Testing: [jest](https://www.npmjs.com/package/jest)
-
-To test please run:
-```
-npm run test
-```
 
 ## Usage
 
 1. Clone this repository to your local computer.
 2. Open the repo in VS Code.
 3. Open the index.js file in the Integrated Terminal.
-4. Once you have installed inquirer, type the following in the command line:
-```
-npm i
-```
-6. 
-7. 
+4. Once you have installed inquirer, type the following in the command line: ```npm i```
+5. Type the following in the command line: ```node index.js```
+6. Use the command line to navigate the management system.
+7. To exit, type the following the command line:
+- MacOS: ```Command + C```
+- Windows: ```Control + C```
 
 ## Demo
 
