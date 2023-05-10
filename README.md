@@ -33,9 +33,9 @@ In order to install **inquirer**, please write the following in the Command Line
 4. Once you have installed inquirer, type the following in the command line: ```npm i```
 5. Type the following in the command line: ```node index.js```
 6. Use the command line to navigate the management system.
-7. To exit, type the following the command line:
-- MacOS: ```Command + C```
-- Windows: ```Control + C```
+7. To exit, select ```Quit``` from the selections or type the following the command line:
+    - MacOS: ```Command + C```
+    - Windows: ```Control + C```
 
 ## Demo
 
@@ -45,11 +45,7 @@ Click to watch the [demo on YouTube]().
 
 To contribute to this project, you may create a git fork.
 
-## Questions
-
-If you have any questions or concerns, you may reach me at ***vmcnorrill@gmail.com***.
-
-To view my other projects, you may visit my Git Hub profile: [victoriamcn](https://github.com/victoriamcn).
+To view my other projects, you may visit my GitHub profile: [victoriamcn](https://github.com/victoriamcn).
 
 
 ## License
