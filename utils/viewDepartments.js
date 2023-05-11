@@ -10,7 +10,7 @@ function viewDepartments() {
       console.info(error)
     }
     console.table(results)
-    init;
+    init();
   })
 }
 

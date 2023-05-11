@@ -8,12 +8,12 @@ function updateEmployee() {
         .prompt([
             {
                 type: 'input',
-                name: 'name',
+                name: 'first_name',
                 message: "What is the employee's FIRST name?"
             },
             {
                 type: 'input',
-                name: 'name',
+                name: 'last_name',
                 message: "What is the employee's LAST name?"
             },
             {
@@ -36,6 +36,7 @@ function updateEmployee() {
         .then(async () => {
             console.log('Please see the updated employee table below.')
             viewEmployees()
+            init()
         })
         .catch((error) => {
             console.log('There was an error');

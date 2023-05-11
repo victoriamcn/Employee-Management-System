@@ -15,9 +15,6 @@ const addRole = require('./utils/addRole')
 const viewDepartments = require('./utils/viewDepartments')
 const addDepartment = require('./utils/addDepartment')
 
-//Array of questions for user input
-// const menu = 
-
 //function to initialize prompt
 function init() {
     inquirer
@@ -101,4 +98,4 @@ function init() {
 
 init();
 
-module.exports = init
+module.exports = init()

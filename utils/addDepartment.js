@@ -18,7 +18,7 @@ function addDepartment() {
         .then(async () => {
             console.log('Please see the updated department table below.')
             viewDepartments()
-            init;
+            init();
         })
         .catch((error) => {
             console.log('There was an error');
