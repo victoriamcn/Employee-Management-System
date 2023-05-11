@@ -11,7 +11,7 @@ function viewRoles() {
       }
       console.table(results);
     })
-    init();
+    //init();
 }
 
 

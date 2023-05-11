@@ -11,7 +11,7 @@ function viewEmployees() {
     }
     console.table(results);
   })
-  init();
+  //init();
 }
 
 module.exports = viewEmployees

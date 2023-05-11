@@ -27,7 +27,7 @@ function updateEmployee() {
         .then(async () => {
             console.log('Please see the updated employee table below.')
             viewEmployees()
-            init();
+            //init();
         })
         .catch((error) => {
             console.log('There was an error');

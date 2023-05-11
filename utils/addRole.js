@@ -33,7 +33,7 @@ function addRole() {
         .then(async () => {
             console.log('Please see the updated role table below.')
             viewRoles()
-            init();
+            //init();
         })
         .catch((error) => {
             console.log('There was an error');

@@ -10,7 +10,7 @@ VALUES
     ('Animal Control'),
     ('City Council'),
     ('Mayoral Office'),
-    ('Public Works'),;
+    ('Public Works');
 
 INSERT INTO role
     (title,salary,department_id)
@@ -29,7 +29,7 @@ VALUES
     ('Mayor', 100000, 7),
     ('Park Ranger', 48000, 4),
     ('Maintenance Tech', 50000, 8),
-    ('Director', 85000, 4),;
+    ('Director', 85000, 4);
 
 INSERT INTO employee
     (first_name,last_name,role_id,manager_id)
@@ -54,4 +54,4 @@ VALUES
     ('Bill', 'Dexhart', 11, 1),
     ('Carl', 'Lorthner', 13, 2),
     ('George', 'Williams', 14, 1),
-    ('Kyle', 'Kyles', 15, 1),;
+    ('Kyle', 'Kyles', 15, 1);

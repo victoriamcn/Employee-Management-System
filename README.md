@@ -30,10 +30,18 @@ In order to install **inquirer**, please write the following in the Command Line
 1. Clone this repository to your local computer.
 2. Open the repo in VS Code.
 3. Open the index.js file in the Integrated Terminal.
-4. Once you have installed inquirer, type the following in the command line: ```npm i```
-5. Type the following in the command line: ```node index.js```
-6. Use the command line to navigate the management system.
-7. To exit, select ```Quit``` from the selections or type ```Control + C```
+4. Type the following in the command line: ```npm i```
+5. Create your own ```.env``` file with the following content:
+```
+DB_USER=''
+DB_PASSWORD=''
+DB_NAME='employees'
+```
+6. Fill in your MySQL2 username and password in the ```.env``` file.
+7. Login to MySQL to create and seed the MySQL database. Exit MySQL.
+8. Type the following in the command line: ```node index.js```
+9. Use the command line to navigate the management system.
+10. To exit, select ```Quit``` from the selections or type ```Control + C```
 
 ## Demo
 
