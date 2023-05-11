@@ -45,7 +45,7 @@ DB_NAME='employees'
 
 ## Demo
 
-Click to watch the [demo on YouTube]().
+[Click to watch the demo on YouTube](https://youtu.be/w93NYg3hY4E).
 
 ## Contributing
 
