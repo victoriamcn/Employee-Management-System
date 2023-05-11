@@ -53,9 +53,9 @@ To view my other projects, you may visit my GitHub profile: [victoriamcn](https:
 ## Credits
 
 ### Georgia Tech Staff
-
 - My instructor, [Saurav Khatiwada](https://github.com/khatiwadasaurav).
 - My tutor, Juan Delgado.
+- My grader for my first attempt, Central Grading - AH.
 
 ### npm
 - console.table: [LINK](https://www.npmjs.com/package/console.table)
@@ -63,6 +63,7 @@ To view my other projects, you may visit my GitHub profile: [victoriamcn](https:
 - mysql2: [LINK](https://www.npmjs.com/package/mysql2#first-query)
 
 ### Example Code
+- GitHub: [andrewcmcghie](https://github.com/andrewcmcghie/HW--12-Employee-Tracker/blob/main/server.js)
 - GitHub: [anirud314](https://github.com/anirud314/employeeTable)
 - GitHub: [EdenKhaos](https://github.com/EdenKhaos/12-mysql-employee-tracker/blob/master/server.js) 
 - YouTube: [MySQL Node.js Express by Sam Meech-Ward](https://www.youtube.com/watch?v=Hej48pi_lOc)
