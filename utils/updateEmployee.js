@@ -7,26 +7,29 @@ function updateEmployee() {
     inquirer
         .prompt([
             {
-                type: 'list',
+                type: 'input',
                 name: 'name',
-                message: "What is the employee's FIRST and LAST name?"
+                message: "What is the employee's FIRST name?"
             },
             {
-                type: 'list',
+                type: 'input',
+                name: 'name',
+                message: "What is the employee's LAST name?"
+            },
+            {
+                type: 'input',
                 name: 'role_id',
-                message: "What is the employee's new role?",
-                choices: viewRoles.map(role => ({ name: role.title, value: role.id }))
+                message: "What is the employee's new role id?",
             },
             {
-                type: 'list',
+                type: 'input',
                 name: 'manager_id',
-                message: "Who is the employee's new manager?",
-                choices: '',
+                message: "What is the employee's new manager's id?",
             },
         ])
         .then(async (response) => {
             connection.query(
-                //`UPDATE employee (employee.first_name, employee.last_name, employee.role_id, employee.manager_id) VALUES (${response.first_name}, ${response.last_name}, ${response.role_id}, ${response.manager_id})`
+                `UPDATE employee (first_name, last_name, role_id, manager_id) VALUES ('${response.first_name}', '${response.last_name}', ${response.role_id}, ${response.manager_id})`
             );
 
         })
