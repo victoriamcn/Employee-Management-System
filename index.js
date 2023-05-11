@@ -14,6 +14,8 @@ const addRole = require('./utils/addRole')
 //department
 const viewDepartments = require('./utils/viewDepartments')
 const addDepartment = require('./utils/addDepartment')
+//quit
+const quit = require('./utils/quit')
 
 //function to initialize prompt
 function init() {
@@ -85,7 +87,8 @@ function init() {
                 case 'addDepartment':
                     addDepartment()
                     break;
-                default: end()
+                case 'quit':
+                    quit()
                     break;
             }
         })
@@ -93,9 +96,8 @@ function init() {
             console.log('There was an error:');
             console.info(error);
         });
-
 }
 
-init();
+//init();
 
 module.exports = init()
